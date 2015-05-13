@@ -1,6 +1,5 @@
 #ifndef _MAINAPP_H
 #define _MAINAPP_H
-
 #include <wx/wx.h> 
 
 //Essa classe irá iniciar a aplicação por meio do método OnInit

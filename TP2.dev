@@ -1,7 +1,7 @@
 [Project]
 FileName=TP2.dev
 Name=TP2
-UnitCount=2
+UnitCount=4
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -11,9 +11,9 @@ ProfileIndex=0
 Folders=
 
 [Unit1]
-FileName=MainApp.h
+FileName=App\MainApp.cpp
 CompileCpp=1
-Folder=
+Folder=TP2
 Compile=1
 Link=1
 Priority=1000
@@ -21,9 +21,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=MainApp.cpp
+FileName=App\MainApp.h
 CompileCpp=1
-Folder=
+Folder=TP2
 Compile=1
 Link=1
 Priority=1000
@@ -104,4 +104,24 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=9
 CompilerType=9
+
+[Unit3]
+FileName=Menu\Menu.cpp
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=Menu\Menu.h
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
 
