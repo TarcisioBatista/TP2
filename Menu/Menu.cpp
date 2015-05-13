@@ -1,10 +1,8 @@
 #include "Menu.h"
 
 BEGIN_EVENT_TABLE(Menu, wxMenuBar)
-    EVT_MENU(ID_FILE, Menu::OnFile)
     EVT_MENU(ID_NEW, Menu::OnNew)
     EVT_MENU(ID_SAVE, Menu::OnSave)
-    EVT_MENU(ID_TOOLS, Menu::OnTools)
     EVT_MENU(ID_PORTUGUESE, Menu::OnPortuguese)
     EVT_MENU(ID_ENGLISH, Menu::OnEnglish)
     EVT_MENU(wxID_EXIT, Menu::OnExit)

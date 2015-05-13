@@ -1,7 +1,7 @@
 [Project]
 FileName=TP2.dev
 Name=TP2
-UnitCount=4
+UnitCount=6
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -117,6 +117,26 @@ BuildCmd=
 
 [Unit4]
 FileName=Menu\Menu.h
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=Frame\Frame.cpp
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=Frame\Frame.h
 CompileCpp=1
 Folder=TP2
 Compile=1
