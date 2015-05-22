@@ -1,7 +1,8 @@
 #ifndef _MAINAPP_H
 #define _MAINAPP_H
 
-#include <wx/wx.h> 
+#include "Constant.h"
+#include "MainFrame.h"
 
 //Essa classe irá iniciar a aplicação por meio do método OnInit
 class MainApp : public wxApp {   
@@ -10,4 +11,4 @@ class MainApp : public wxApp {
 };
 
 DECLARE_APP(MainApp) 
-#endif _MAINAPP_H
+#endif
