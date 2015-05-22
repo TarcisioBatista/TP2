@@ -5,7 +5,7 @@ Order=0
 Open=1
 Top=1
 CursorCol=1
-CursorRow=9
+CursorRow=13
 TopLine=1
 LeftChar=1
 [Editor_1]
@@ -18,6 +18,10 @@ LeftChar=1
 [Editor_2]
 Open=0
 Top=0
+CursorCol=1
+CursorRow=10
+TopLine=1
+LeftChar=1
 [Editor_3]
 Open=0
 Top=0
@@ -29,6 +33,6 @@ LeftChar=1
 Open=0
 Top=0
 CursorCol=1
-CursorRow=10
+CursorRow=1
 TopLine=1
 LeftChar=1
