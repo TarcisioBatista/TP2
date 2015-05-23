@@ -1,7 +1,7 @@
 #ifndef _CONSTANT_H
 #define _CONSTANT_H
 
-#include <wx/wx.h> 
+#include <wx/wx.h>
 
 //Esta classe possui diversas constantes utilizadas no programa
 
@@ -14,7 +14,7 @@ wxString nameMain = "TP2";
 //Pontos
 
 //Posição inicial da frame
-wxPoint posMain = wxPoint (50,50);
+wxPoint posMain = wxPoint (-1,-1);
 
 
 //Tamanhos

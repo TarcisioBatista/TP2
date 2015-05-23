@@ -1,7 +1,11 @@
 [Project]
 FileName=TP2.dev
 Name=TP2
+<<<<<<< HEAD
 UnitCount=5
+=======
+UnitCount=7
+>>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -9,6 +13,29 @@ IsCpp=1
 ProfilesCount=2
 ProfileIndex=0
 Folders=
+<<<<<<< HEAD
+=======
+
+[Unit1]
+FileName=App\MainApp.cpp
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit2]
+FileName=App\MainApp.h
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+>>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 
 [VersionInfo]
 Major=0
@@ -85,6 +112,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=9
 CompilerType=9
+<<<<<<< HEAD
 
 [Unit1]
 FileName=App\Constant.h
@@ -108,6 +136,11 @@ BuildCmd=
 
 [Unit3]
 FileName=App\MainApp.h
+=======
+
+[Unit3]
+FileName=Menu\Menu.cpp
+>>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 CompileCpp=1
 Folder=TP2
 Compile=1
@@ -117,6 +150,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
+<<<<<<< HEAD
 FileName=App\MainFrame.cpp
 CompileCpp=1
 Folder=TP2
@@ -128,6 +162,29 @@ BuildCmd=
 
 [Unit5]
 FileName=App\MainFrame.h
+=======
+FileName=App\MainApp.h
+>>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=App\MainFrame.h
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
+FileName=Menu\Menu.h
 CompileCpp=1
 Folder=TP2
 Compile=1
