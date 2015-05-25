@@ -27,15 +27,15 @@ Menu::Menu()
         LanguagesSubMenu->Append(ID_ENGLISH, "&English", "Translate to English");
         ToolsMenu->AppendSubMenu(LanguagesSubMenu, "&Idiomas", "idiomas");
         this->Append(ToolsMenu, "Ferramentas");
-
 	
 	// Menu About - About
 	AboutMenu = new wxMenu();
-    	AboutMenu->Append(wxID_ABOUT, "&About", "Exibe informações");
-        this->Append(AboutMenu, "&About");       
+    	AboutMenu->Append(wxID_ABOUT, "&Sobre", "Exibe informações");
+        this->Append(AboutMenu, "&Sobre");       
         
 }    
-    
+
+//Métodos de cada opção do menu    
 void Menu::OnNew(wxCommandEvent& event){
         wxMessageBox( "testando tratamento de eventos1",
             "sobre", wxOK | wxICON_INFORMATION );
@@ -58,6 +58,6 @@ void Menu::OnExit(wxCommandEvent& event)
 }
 void Menu::OnAbout(wxCommandEvent& event)
 {
-    wxMessageBox( "Este sotware foi desenvovido por Tarcisio Batista e Jessica Ferreira",
+    wxMessageBox( "Este sotware foi desenvovido por Tarcisio Batista e Jéssica Ferreira como segundo trabalho prático da disciplina de Projeto Assistido por Computador - PAC, 5º período de Engenharia de Sistemas.",
             "sobre", wxOK | wxICON_INFORMATION );
 }
