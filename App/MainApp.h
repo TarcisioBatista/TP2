@@ -7,7 +7,7 @@
 #endif
 
 #include "Constant.h"
-#include "MainFrame.h"
+#include "../Frame/MainFrame.h"
  
 
 //Essa classe irá iniciar a aplicação por meio do método OnInit

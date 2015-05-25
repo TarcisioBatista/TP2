@@ -2,10 +2,14 @@
 FileName=TP2.dev
 Name=TP2
 <<<<<<< HEAD
+<<<<<<< HEAD
 UnitCount=5
 =======
 UnitCount=7
 >>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
+=======
+UnitCount=7
+>>>>>>> menu
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -151,7 +155,7 @@ BuildCmd=
 
 [Unit4]
 <<<<<<< HEAD
-FileName=App\MainFrame.cpp
+FileName=Menu\Menu.h
 CompileCpp=1
 Folder=TP2
 Compile=1
@@ -184,7 +188,27 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=Menu\Menu.h
+FileName=Frame\MainFrame.h
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=App\MainApp.h
+CompileCpp=1
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=Frame\MainFrame.cpp
 CompileCpp=1
 Folder=TP2
 Compile=1

@@ -14,23 +14,25 @@ Menu::Menu()
     
     //menu arquivo -> novo - salvar - sair            
     FileMenu = new wxMenu();
-	FileMenu->Append(ID_NEW, "&Novo", "Novo");
-	FileMenu->Append(ID_SAVE, "&Salvar", "Salvar");
-	FileMenu->AppendSeparator();
-	FileMenu->Append(wxID_EXIT, "&Sair", "Sair");
-	this->Append(FileMenu, "&Arquivo");
+    	FileMenu->Append(ID_NEW, "&Novo", "Novo");
+    	FileMenu->Append(ID_SAVE, "&Salvar", "Salvar");
+    	FileMenu->AppendSeparator();
+    	FileMenu->Append(wxID_EXIT, "&Sair", "Sair");
+    	this->Append(FileMenu, "&Arquivo");
 	
 	// Menu Ferramentas -> idiomas ->portugues - ingles
     ToolsMenu = new wxMenu();
-    ToolsMenu->AppendSubMenu(LanguagesSubMenu, "&Idiomas", "idiomas");
-    LanguagesSubMenu->Append(ID_PORTUGUESE, "&Português", "Traduzir para o Portugês");
-    LanguagesSubMenu->Append(ID_ENGLISH, "&English", "Translate to English");
-    this->Append(ToolsMenu, "Ferramentas");
+    LanguagesSubMenu = new wxMenu();        
+        LanguagesSubMenu->Append(ID_PORTUGUESE, "&Português", "Traduzir para o Portugês");
+        LanguagesSubMenu->Append(ID_ENGLISH, "&English", "Translate to English");
+        ToolsMenu->AppendSubMenu(LanguagesSubMenu, "&Idiomas", "idiomas");
+        this->Append(ToolsMenu, "Ferramentas");
+
 	
 	// Menu About - About
 	AboutMenu = new wxMenu();
-	AboutMenu->Append(wxID_ABOUT, "&About", "Exibe informações");
-    this->Append(AboutMenu, "&About");       
+    	AboutMenu->Append(wxID_ABOUT, "&About", "Exibe informações");
+        this->Append(AboutMenu, "&About");       
         
 }    
     
@@ -56,6 +58,6 @@ void Menu::OnExit(wxCommandEvent& event)
 }
 void Menu::OnAbout(wxCommandEvent& event)
 {
-    wxMessageBox( "Este sotware foi desenvovido por Tarcisio Batista",
+    wxMessageBox( "Este sotware foi desenvovido por Tarcisio Batista e Jessica Ferreira",
             "sobre", wxOK | wxICON_INFORMATION );
 }

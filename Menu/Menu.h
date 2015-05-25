@@ -4,6 +4,7 @@ class Menu: public wxMenuBar{
 
     public:
         Menu();
+        //metodos para tratamento de eventos
         void OnNew(wxCommandEvent& event);
         void OnSave(wxCommandEvent& event);
         void OnExit(wxCommandEvent& event);
@@ -24,6 +25,7 @@ class Menu: public wxMenuBar{
         
     DECLARE_EVENT_TABLE();
 };
+
 
 const int ID_NEW = 1;
 const int ID_SAVE = 2;

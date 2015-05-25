@@ -1,7 +1,7 @@
 # Project: TP2
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 22/05/15 21:57
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 25/05/15 11:14
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
@@ -36,11 +36,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/MainApp.o: $(GLOBALDEPS) App/MainApp.cpp App/MainApp.h App/Constant.h App/MainFrame.h Menu/Menu.h
+Objects/MingW/MainApp.o: $(GLOBALDEPS) App/MainApp.cpp App/MainApp.h App/Constant.h Frame/MainFrame.h
 	$(CPP) -c App/MainApp.cpp -o Objects/MingW/MainApp.o $(CXXFLAGS)
 
 Objects/MingW/Menu.o: $(GLOBALDEPS) Menu/Menu.cpp Menu/Menu.h
 	$(CPP) -c Menu/Menu.cpp -o Objects/MingW/Menu.o $(CXXFLAGS)
 
-Objects/MingW/MainFrame.o: $(GLOBALDEPS) App/MainFrame.cpp App/MainFrame.h Menu/Menu.h
-	$(CPP) -c App/MainFrame.cpp -o Objects/MingW/MainFrame.o $(CXXFLAGS)
+Objects/MingW/MainFrame.o: $(GLOBALDEPS) Frame/MainFrame.cpp Frame/MainFrame.h Menu/Menu.h
+	$(CPP) -c Frame/MainFrame.cpp -o Objects/MingW/MainFrame.o $(CXXFLAGS)

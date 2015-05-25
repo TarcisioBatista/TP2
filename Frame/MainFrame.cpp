@@ -1,13 +1,14 @@
 #include "MainFrame.h"
+#include "../Menu/Menu.h"
 
 //Construtor da Frame
 MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
                 :wxFrame(NULL, wxID_ANY, title, pos, size){
     
     //Criação do Menu
-    //menuBar = new Menu();
-    //this->SetMenuBar(menuBar);
-    Centre();  
+    Menu *MenuBar = new Menu();
+    SetMenuBar(MenuBar);
+    Centre();
     
     // connectando eventos de menu da frame aos "handlers" da classe menu
     Connect(ID_NEW, wxEVT_COMMAND_MENU_SELECTED,
