@@ -3,7 +3,7 @@
 
 #include <wx/wx.h>
 
-//Esta classe possui diversas constantes utilizadas no programa
+//Este cabeçalho possui diversas constantes utilizadas no programa
 
 //Strings
 
