@@ -5,13 +5,13 @@ Order=0
 Open=1
 <<<<<<< HEAD
 Top=1
-CursorCol=17
+CursorCol=1
 =======
 Top=0
 <<<<<<< HEAD
 CursorCol=21
 >>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
-CursorRow=6
+CursorRow=8
 =======
 CursorCol=1
 CursorRow=9
@@ -29,22 +29,22 @@ LeftChar=1
 [Editor_2]
 Open=0
 Top=0
-CursorCol=13
-CursorRow=57
-TopLine=42
+CursorCol=23
+CursorRow=25
+TopLine=25
 LeftChar=1
 [Editor_3]
 Open=0
 Top=0
-CursorCol=12
-CursorRow=1
-TopLine=1
+CursorCol=1
+CursorRow=35
+TopLine=17
 LeftChar=1
 [Editor_4]
 Open=0
 Top=0
 CursorCol=1
-CursorRow=8
+CursorRow=6
 =======
 Open=1
 Top=1
@@ -65,17 +65,17 @@ CursorRow=15
 TopLine=1
 LeftChar=1
 [Editor_6]
-CursorCol=19
-CursorRow=1
-TopLine=1
+CursorCol=9
+CursorRow=15
+TopLine=3
 LeftChar=1
 [Editor_5]
-CursorCol=31
-CursorRow=27
+CursorCol=26
+CursorRow=43
 =======
 CursorCol=1
 CursorRow=62
-TopLine=12
+TopLine=27
 LeftChar=1
 [Editor_5]
 CursorCol=1
@@ -87,4 +87,14 @@ CursorCol=1
 CursorRow=1
 >>>>>>> menu
 TopLine=1
+LeftChar=1
+[Editor_7]
+CursorCol=1
+CursorRow=10
+TopLine=4
+LeftChar=1
+[Editor_8]
+CursorCol=5
+CursorRow=16
+TopLine=3
 LeftChar=1

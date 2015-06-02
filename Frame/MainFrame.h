@@ -8,7 +8,18 @@
 class MainFrame: public wxFrame{    
     public:
         // Constructor
-        MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);     
+        MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+        
+        wxToolBar *m_toolbar;
+        
+        enum{
+            ID_NEWTOOLS,
+            ID_SAVETOOLS,
+            ID_OPENTOOLS,
+            ID_HELPTOOLS,
+            ID_CLOSETOOLS                          
+        };
+             
 };
 
 

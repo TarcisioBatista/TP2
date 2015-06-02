@@ -1,14 +1,14 @@
 # Project: TP2
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 29/05/15 17:48
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 02/06/15 09:28
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/MainApp.o Objects/MingW/Menu.o Objects/MingW/MainFrame.o
-LINKOBJ   = "Objects/MingW/MainApp.o" "Objects/MingW/Menu.o" "Objects/MingW/MainFrame.o"
+OBJ       = Objects/MingW/MainApp.o Objects/MingW/Menu.o Objects/MingW/MainFrame.o Objects/MingW/ToolBar.o
+LINKOBJ   = "Objects/MingW/MainApp.o" "Objects/MingW/Menu.o" "Objects/MingW/MainFrame.o" "Objects/MingW/ToolBar.o"
 LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  
 INCS      = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
@@ -42,5 +42,8 @@ Objects/MingW/MainApp.o: $(GLOBALDEPS) App/MainApp.cpp App/MainApp.h App/Constan
 Objects/MingW/Menu.o: $(GLOBALDEPS) Menu/Menu.cpp Menu/Menu.h
 	$(CPP) -c Menu/Menu.cpp -o Objects/MingW/Menu.o $(CXXFLAGS)
 
-Objects/MingW/MainFrame.o: $(GLOBALDEPS) Frame/MainFrame.cpp Frame/MainFrame.h Menu/Menu.h
+Objects/MingW/MainFrame.o: $(GLOBALDEPS) Frame/MainFrame.cpp Frame/MainFrame.h Menu/Menu.h ToolBar/ToolBar.h
 	$(CPP) -c Frame/MainFrame.cpp -o Objects/MingW/MainFrame.o $(CXXFLAGS)
+
+Objects/MingW/ToolBar.o: $(GLOBALDEPS) ToolBar/ToolBar.cpp ToolBar/ToolBar.h
+	$(CPP) -c ToolBar/ToolBar.cpp -o Objects/MingW/ToolBar.o $(CXXFLAGS)
