@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "../About/About.h"
    
 Menu::Menu()
         :wxMenuBar(){
@@ -66,6 +67,8 @@ void Menu::OnExit(wxCommandEvent& event)
 }
 void Menu::OnAbout(wxCommandEvent& event)
 {
-    wxMessageBox( "Este sotware foi desenvovido por Tarcisio Batista e Jéssica Ferreira como segundo trabalho prático da disciplina de Projeto Assistido por Computador - PAC, 5º período de Engenharia de Sistemas.",
-            "sobre", wxOK | wxICON_INFORMATION );
+    About *dlg = new About(this);
+    dlg->SetText("Este sotware foi desenvovido por \nTarcisio Batista e Jéssica Ferreira \ncomo segundo trabalho prático \n da disciplina de Projeto Assistido \npor Computador - PAC, \n5º período de \nEngenharia de Sistemas. \nUnimontes - 2015");
+    dlg->ShowModal();
+    dlg->Destroy();
 }
