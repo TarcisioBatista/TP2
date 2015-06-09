@@ -47,4 +47,6 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     Connect(wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnExit));   
     Connect(wxID_ABOUT, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnAbout));
     
+    
+    AccessControl acc;
 };

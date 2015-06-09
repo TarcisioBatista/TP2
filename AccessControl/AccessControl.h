@@ -10,21 +10,21 @@ class AccessControl{
         AccessControl();
         
         //Métodos para abrir e fechar conexão com bd
-        int open_bd();
-        int close_bd();
+        void open_bd();
+        void close_bd();
         
         //Método para inserir dados de usuário
-        int insere(); 
+        void executa(); 
+          
         
     private:
         //bd
         sqlite3 *db;
         //constante para receber retorno da abertura do bd
-        int rc;
-        //string para fazer querys
-        char *sql;  
+        int rc;  
         //msg de erro
-        char *zErrMsg;
+        char *err_msg;
+        sqlite3_stmt *statement;
 };
 
 

@@ -1,26 +1,29 @@
-sqlite> CREATE TABLE user(
-   ...> cod_user INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-   ...> login VARCHAR(20) NOT NULL,
-   ...> senha VARCHAR(8) NOT NULL
-   ...> );
-sqlite> CREATE TABLE desc_acao(
-   ...> cod_desc_acao INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-   ...> descricao VARCHAR(100) NOT NULL
-   ...> );
+CREATE TABLE user(
+idUser INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+login VARCHAR(20) NOT NULL,
+senha VARCHAR(8) NOT NULL
+);
 
 
-sqlite> CREATE TABLE acao(
-   ...> cod_acao INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-   ...> cod_desc_acao INTEGER references desc_acao(cod_desc_acao) on delete casc
-ade,
-   ...> cod_user INTEGER REFERENCES user(cod_user) on delete cascade,
-   ...> data TEXT,
-   ...> hora TEXT
-   ...> );
+CREATE TABLE descAcao(
+idDescAcao INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+descricao VARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE acao(
+idAcao INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+idDescAcao INTEGER REFERENCES descAcao(idDescAcao) on delete cascade,
+idUser INTEGER REFERENCES user(idUser) on delete cascade,
+data TEXT,
+hora TEXT
+);
 
 
 
-sqlite> CREATE TABLE log(
-   ...> cod_log INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-   ...> cod_acao INTEGER REFERENCES acao(cod_acao) on delete cascade
-   ...> );
+CREATE TABLE log(
+idLog INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+idAcao INTEGER REFERENCES acao(idAcao) on delete cascade
+);
+
+
