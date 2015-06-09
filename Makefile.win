@@ -1,15 +1,15 @@
 # Project: TP2
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/06/15 16:05
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 08/06/15 23:04
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/MainApp.o Objects/MingW/Menu.o Objects/MingW/MainFrame.o Objects/MingW/About.o
-LINKOBJ   = "Objects/MingW/MainApp.o" "Objects/MingW/Menu.o" "Objects/MingW/MainFrame.o" "Objects/MingW/About.o"
-LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  
+OBJ       = Objects/MingW/MainApp.o Objects/MingW/Menu.o Objects/MingW/MainFrame.o Objects/MingW/About.o Objects/MingW/AccessControl.o
+LINKOBJ   = "Objects/MingW/MainApp.o" "Objects/MingW/Menu.o" "Objects/MingW/MainFrame.o" "Objects/MingW/About.o" "Objects/MingW/AccessControl.o"
+LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  "../../../../../../Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib/sqlite3.a"  
 INCS      = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
 RCINCS    = --include-dir "C:/PROGRA~2/Dev-Cpp/include/common"
@@ -47,3 +47,6 @@ Objects/MingW/MainFrame.o: $(GLOBALDEPS) Frame/MainFrame.cpp Frame/MainFrame.h M
 
 Objects/MingW/About.o: $(GLOBALDEPS) About/About.cpp About/About.h
 	$(CPP) -c About/About.cpp -o Objects/MingW/About.o $(CXXFLAGS)
+
+Objects/MingW/AccessControl.o: $(GLOBALDEPS) AccessControl/AccessControl.cpp AccessControl/AccessControl.h
+	$(CPP) -c AccessControl/AccessControl.cpp -o Objects/MingW/AccessControl.o $(CXXFLAGS)

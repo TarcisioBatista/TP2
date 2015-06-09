@@ -1,3 +1,6 @@
+#ifndef _MENU_H
+#define _MENU_H
+
 #include <wx/wx.h>
 
 class Menu: public wxMenuBar{
@@ -34,3 +37,5 @@ const int ID_PORTUGUESE = 4;
 const int ID_ENGLISH = 5;
 const int ID_HELP = 6;
 
+
+#endif

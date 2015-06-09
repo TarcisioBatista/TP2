@@ -2,7 +2,6 @@
 #define _MAINFRAME_H
 
 #include <wx/wx.h>
-#include "../ToolBar/ToolBar.h"
 
 //Esta classe gerencia todos os métodos que atuam no frame.
 class MainFrame: public wxFrame{    
