@@ -8,6 +8,7 @@
 
 #include "Constant.h"
 #include "../Frame/MainFrame.h"
+#include "../AccessControl/LoginFrame.h"
  
 
 //Essa classe irá iniciar a aplicação por meio do método OnInit

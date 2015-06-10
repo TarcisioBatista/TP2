@@ -59,7 +59,7 @@ ProductName=
 ProductVersion=
 AutoIncBuildNrOnRebuild=0
 AutoIncBuildNrOnCompile=0
-UnitCount=11
+UnitCount=13
 
 [Profile1]
 ProfileName=MingW gcc
@@ -249,6 +249,26 @@ BuildCmd=
 
 [Unit11]
 FileName=AccessControl\AccessControl.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
+FileName=AccessControl\LoginFrame.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=AccessControl\LoginFrame.cpp
 CompileCpp=1
 Folder=
 Compile=1

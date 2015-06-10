@@ -3,9 +3,9 @@
 AccessControl::AccessControl(){
     //abrir bd
     open_bd();
-        
     
-    executa();    
+    
+   // executa();    
     
     
     
@@ -26,9 +26,7 @@ void AccessControl::close_bd(){
 }
 
 //Esse método executa uma sql no banco de dados
-void AccessControl::executa(){
-    char *sql = "SELECT * FROM user;";
-    
+void AccessControl::executa(char *sql){
     //prepara sql para ser executada
     rc = sqlite3_prepare_v2(db, sql, -1, &statement, 0);    
     if(rc != SQLITE_OK)
@@ -39,4 +37,8 @@ void AccessControl::executa(){
     if(rc != SQLITE_OK)
         wxLogMessage(err_msg, "Erro", wxOK | wxICON_INFORMATION);
 
+}
+
+void AccessControl::insere(){
+    
 }

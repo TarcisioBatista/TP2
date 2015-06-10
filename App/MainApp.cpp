@@ -3,11 +3,16 @@
 IMPLEMENT_APP(MainApp)
   
 //O método OnInit cria uma frame na tela com os dados dos menus e barras de ferramentas.
-bool MainApp::OnInit(){
+//Também cria a frame inicial de login no sistema
+bool MainApp::OnInit(){    
+    //Frame principal
+    MainFrame *frame = new MainFrame(nameMain, posMain, sizeMain);
+    frame->Show(true); 
     
-     MainFrame *frame = new MainFrame(nameMain, posMain, sizeMain);
-     frame->Show(true);                                 
-     SetTopWindow(frame);
-    
+    //Frame de login 
+    LoginFrame *lframe = new LoginFrame(wxT("Login"));
+    lframe->Show(true);
+    SetTopWindow(lframe);                                
+         
     return true;                                  
 };
