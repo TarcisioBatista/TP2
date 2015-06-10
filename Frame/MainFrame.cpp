@@ -19,14 +19,14 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     //Criando barra de ferramentas
     m_toolbar = CreateToolBar(wxTB_FLAT | wxTB_HORIZONTAL | wxTB_TEXT,wxID_ANY);   
     
-    m_toolbar->AddTool(ID_NEW, wxString(wxT("Novo")), wxBitmap(wxT("../../Images/Icones/newfile.bmp"), wxBITMAP_TYPE_BMP), wxString(wxT("Novo")));
-    m_toolbar->AddTool(ID_SAVE, wxString(wxT("Salvar")), wxBitmap(wxT("../../Images/Icones/save.bmp"), wxBITMAP_TYPE_BMP), wxString(wxT("Salvar")));
-    m_toolbar->AddTool(ID_OPEN, wxString(wxT("Abrir")), wxBitmap(wxT("../../Images/Icones/open.bmp"), wxBITMAP_TYPE_BMP), wxString(wxT("Abrir")));
+    m_toolbar->AddTool(ID_NEW, wxString(_("Novo")), wxBitmap(wxT("../../Images/Icones/newfile.bmp"), wxBITMAP_TYPE_BMP), wxString(_("Novo")));
+    m_toolbar->AddTool(ID_SAVE, wxString(_("Salvar")), wxBitmap(wxT("../../Images/Icones/save.bmp"), wxBITMAP_TYPE_BMP), wxString(_("Salvar")));
+    m_toolbar->AddTool(ID_OPEN, wxString(_("Abrir")), wxBitmap(wxT("../../Images/Icones/open.bmp"), wxBITMAP_TYPE_BMP), wxString(_("Abrir")));
     
     m_toolbar->AddSeparator();
     
-    m_toolbar->AddTool(ID_HELP, wxString(wxT("Ajuda")), wxBitmap(wxT("../../Images/Icones/help.bmp"), wxBITMAP_TYPE_BMP), wxString(wxT("Ajuda")));
-    m_toolbar->AddTool(wxID_EXIT, wxString(wxT("Sair")), wxBitmap(wxT("../../Images/Icones/close.bmp"), wxBITMAP_TYPE_BMP), wxString(wxT("Sair")));
+    m_toolbar->AddTool(ID_HELP, wxString(_("Ajuda")), wxBitmap(wxT("../../Images/Icones/help.bmp"), wxBITMAP_TYPE_BMP), wxString(_("Ajuda")));
+    m_toolbar->AddTool(wxID_EXIT, wxString(_("Sair")), wxBitmap(wxT("../../Images/Icones/close.bmp"), wxBITMAP_TYPE_BMP), wxString(_("Sair")));
 
     //Para atualizar a barra de ferramentas com os ícones bitmap
     m_toolbar->Realize();
@@ -43,7 +43,8 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     Connect(ID_SAVE, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnSave));   
     Connect(ID_HELP, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnHelp));
     Connect(ID_PORTUGUESE, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnPortuguese));       
-    Connect(ID_ENGLISH, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnEnglish));       
+    Connect(ID_ENGLISH, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnEnglish));
+    Connect(ID_SPANISH, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnSpanish));   
     Connect(wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnExit));   
     Connect(wxID_ABOUT, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnAbout));
     

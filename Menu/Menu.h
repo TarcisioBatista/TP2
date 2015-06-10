@@ -1,6 +1,5 @@
 #ifndef _MENU_H
 #define _MENU_H
-
 #include <wx/wx.h>
 
 class Menu: public wxMenuBar{
@@ -17,6 +16,8 @@ class Menu: public wxMenuBar{
         void OnHelp(wxCommandEvent& event);
         void OnPortuguese(wxCommandEvent& event);
         void OnEnglish(wxCommandEvent& event);
+        void OnSpanish(wxCommandEvent& event);
+        
         
     private:
         //Opções do Menu
@@ -35,7 +36,7 @@ const int ID_SAVE = 2;
 const int ID_OPEN = 3;
 const int ID_PORTUGUESE = 4;
 const int ID_ENGLISH = 5;
-const int ID_HELP = 6;
-
+const int ID_SPANISH = 6;
+const int ID_HELP = 7;
 
 #endif

@@ -5,7 +5,6 @@
 
 //Este cabeçalho possui diversas constantes utilizadas no programa
 
-
 //Nome da frame principal
 wxString nameMain = "TP2";
 

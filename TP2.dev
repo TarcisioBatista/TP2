@@ -8,7 +8,7 @@ UnitCount=5
 UnitCount=7
 >>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 =======
-UnitCount=11
+UnitCount=15
 >>>>>>> menu
 PchHead=-1
 PchSource=-1
@@ -258,9 +258,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=AccessControl\LoginFrame.h
+FileName=AccessControl\LoginFrame.cpp
 CompileCpp=1
-Folder=
+Folder=TP2/AccessControl.h
 Compile=1
 Link=1
 Priority=1000
@@ -268,9 +268,29 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit13]
-FileName=AccessControl\LoginFrame.cpp
+FileName=AccessControl\LoginFrame.h
 CompileCpp=1
-Folder=
+Folder=TP2/AccessControl.h
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit14]
+FileName=Translation\Translation.cpp
+CompileCpp=1
+Folder=TP2/AccessControl.cpp
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit15]
+FileName=Translation\Translation.h
+CompileCpp=1
+Folder=TP2/AccessControl.cpp
 Compile=1
 Link=1
 Priority=1000

@@ -24,8 +24,7 @@ class LoginFrame: public wxFrame{
         wxButton *btCancel; 
         
         void entrar(wxCommandEvent &event);
-        void cancelar(wxCommandEvent &event);
-    
+        void cancelar(wxCommandEvent &event);    
 };
 
 

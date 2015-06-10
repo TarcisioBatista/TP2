@@ -8,17 +8,17 @@ LoginFrame::LoginFrame(const wxString &name)
     wxBoxSizer *boxprincipal = new wxBoxSizer(wxVERTICAL);
     wxGridSizer *boxtexto = new wxGridSizer(3, 2, 5, 5);
     wxBoxSizer *boxbotoes = new wxBoxSizer(wxHORIZONTAL);
-    
+
     //Caixas de texto
     login = new wxTextCtrl(painel, -1, wxT(""));
-    password = new wxTextCtrl(painel, -1, wxT(""));    
-    txlogin = new wxStaticText(painel, -1, wxT("Login:"));
-    txpassword = new wxStaticText(painel, -1, wxT("Senha:"));
-    
+    password = new wxTextCtrl(painel, -1, wxT(""));  
+    txlogin = new wxStaticText(painel, -1, _("Login:"));
+    txpassword = new wxStaticText(painel, -1, _("Senha:"));
+
     //Botões
-    btLogin = new wxButton(painel, 1000, wxT("Entrar"));
+    btLogin = new wxButton(painel, 1000, _("Entrar"));
     Connect(1000, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::entrar));
-    btCancel = new wxButton(painel, 1001, wxT("Cancelar"));
+    btCancel = new wxButton(painel, 1001, _("Cancelar"));
     Connect(1001, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::cancelar));
     
     //Colocando caixas de texto e botões no boxsizer
@@ -43,7 +43,7 @@ LoginFrame::LoginFrame(const wxString &name)
 }
 
 void LoginFrame::entrar(wxCommandEvent &event){
-    wxMessageBox( "Teste OK! ","Teste", wxOK | wxICON_INFORMATION );
+    wxMessageBox( _("Teste OK!"),_("Teste"), wxOK | wxICON_INFORMATION );
 }
 
 void LoginFrame::cancelar(wxCommandEvent &event){
