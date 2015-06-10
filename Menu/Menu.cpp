@@ -2,10 +2,13 @@
 #include "Menu.h"
 #include "../App/MainApp.h"
 #include "../About/About.h"
+//#include "../Translation/Translation.h"
 
    
 Menu::Menu()
         :wxMenuBar(){
+            
+    
     
     //menu arquivo -> novo - salvar - sair            
     FileMenu = new wxMenu();
@@ -54,18 +57,19 @@ void Menu::OnSave(wxCommandEvent& event){
             _("Salvar"), wxOK | wxICON_INFORMATION );
             
 }
-void Menu::OnPortuguese(wxCommandEvent& event){
-        wxGetApp().SetLanguage(wxLANGUAGE_PORTUGUESE_BRAZILIAN);   
-        wxGetApp().RecreateGUI();    
-}
-void Menu::OnEnglish(wxCommandEvent& event){  
-        wxGetApp().SetLanguage(wxLANGUAGE_ENGLISH);             
-        wxGetApp().RecreateGUI();
-}
-void Menu::OnSpanish(wxCommandEvent& event){  
-        wxGetApp().SetLanguage(wxLANGUAGE_SPANISH);
-        wxGetApp().RecreateGUI();
-}
+//void Menu::OnPortuguese(wxCommandEvent& event){
+//        wxGetApp().SetLanguage(wxLANGUAGE_PORTUGUESE_BRAZILIAN);   
+//        wxGetApp().RecreateGUI();    
+//}
+//void Menu::OnEnglish(wxCommandEvent& event){  
+//        wxGetApp().SetLanguage(wxLANGUAGE_ENGLISH);             
+//        wxGetApp().RecreateGUI();
+//}
+//void Menu::OnSpanish(wxCommandEvent& event){  
+//        wxGetApp().SetLanguage(wxLANGUAGE_SPANISH);
+//        wxGetApp().RecreateGUI();
+//}
+
 
 void Menu::OnHelp(wxCommandEvent& event){
         wxMessageBox( _("Opção de ajuda."),

@@ -5,10 +5,10 @@
 #ifdef WX_PRECOMP
 #include <wx/wx.h>
 #endif
-#include "../AccessControl/LoginFrame.h"
+
  
 //Essa classe irá iniciar a aplicação por meio do método OnInit
-class MainApp : public wxApp {   
+class MainApp:public wxApp{   
     public:
         virtual bool OnInit();
         void RecreateGUI();

@@ -8,17 +8,16 @@ LoginFrame::LoginFrame(const wxString &name)
     wxBoxSizer *boxprincipal = new wxBoxSizer(wxVERTICAL);
     wxGridSizer *boxtexto = new wxGridSizer(3, 2, 5, 5);
     wxBoxSizer *boxbotoes = new wxBoxSizer(wxHORIZONTAL);
-
+    
     //Caixas de texto
     login = new wxTextCtrl(painel, -1, wxT(""));
-    password = new wxTextCtrl(painel, -1, wxT(""));  
-    txlogin = new wxStaticText(painel, -1, _("Login:"));
-    txpassword = new wxStaticText(painel, -1, _("Senha:"));
-
+    password = new wxTextCtrl(painel, -1, wxT(""));    
+    txlogin = new wxStaticText(painel, -1, wxT("Login:"));
+    txpassword = new wxStaticText(painel, -1, wxT("Senha:"));
+    
     //Botões
-    btLogin = new wxButton(painel, 1000, _("Entrar"));
-    Connect(1000, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::enter));
-
+    btLogin = new wxButton(painel, 1000, wxT("Entrar"));
+    Connect(1000, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::entrar));
     btCancel = new wxButton(painel, 1001, wxT("Cancelar"));
     Connect(1001, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::cancel));
     
@@ -38,32 +37,30 @@ LoginFrame::LoginFrame(const wxString &name)
     painel->SetSizer(boxprincipal);
     login->SetFocus();
     Centre();
-    
-    //Objeto de controle de acesso
-    AccessControl acc;
-
-                    
+                   
 }
-
-void LoginFrame::enter(wxCommandEvent &event){
-
+//Esse método verifica se o usuário digitou o login e senha corretos, e só "entra"
+//no software se esses dados estiverem corretos
+void LoginFrame::entrar(wxCommandEvent &event){
     //Verificar se o usuário digigou valores nas caixas de texto.
     //Se não tiver digitado, aviso. Se tiver digitado, continua execução
     if(login->IsEmpty() || password->IsEmpty())
-        wxMessageBox( "Por favor, preencha todos os campos!","Aviso", wxOK | wxICON_INFORMATION );
+        wxMessageBox( _("Por favor, preencha todos os campos!"),_("Aviso"), wxOK | wxICON_INFORMATION );
     else{   
         //receber valores das caixas de texto
         loginCurrent = login->GetValue();
         passwordCurrent = password->GetValue();
         //verificar login
-        if(checkLogin(loginCurrent, passwordCurrent)){
+        if(confirmLogin(loginCurrent, passwordCurrent)){
+            //Se o login estiver correto, fecha frame de login e abre frame principal
             Close(true);
             //Frame principal
-            MainFrame *frame = new MainFrame("TP2", wxPoint(-1,-1), wxSize(900,700));
+            MainFrame *frame = new MainFrame(_("TP2 - PAC"), wxPoint(-1,-1), wxSize(900,700));
             frame->Show(true);   
         }
         else {
-            wxMessageBox( "Login ou senha incorretos!","Aviso", wxOK | wxICON_INFORMATION );
+            //se o login não estiver correto, mostra mensagem de erro e limpa os campos de digitação
+            wxMessageBox(_( "Login ou senha incorretos!"),_("Aviso"), wxOK | wxICON_INFORMATION );
             login->Clear();
             password->Clear();
         }
@@ -73,10 +70,19 @@ void LoginFrame::enter(wxCommandEvent &event){
 void LoginFrame::cancel(wxCommandEvent &event){
     Close( true );   
 }
-//Esse método verifica se o login digitadp está correto e armazenado no bd.
+//Esse método verifica se o login digitado está correto e armazenado no bd.
 //Se estiver retorna true, se não estiver retorna false.
-bool LoginFrame::checkLogin(wxString user, wxString pass){
+bool LoginFrame::confirmLogin(wxString user, wxString pass){
+    std::string userString = acc.convertToString(user);
     
-    //return false;
-    return true;   
+    //Verifica o login correpondente a senha digitada no banco de dados
+    std::string loginbd = acc.checkLogin(pass);
+    
+    //Se o login for igual ao digitado, login correto e retorna true
+    if(userString == loginbd)    
+        return true;
+    //se não for igual, login ou senha incorretos e retorna false    
+    else return false;   
 }
+
+
