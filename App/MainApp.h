@@ -4,7 +4,6 @@
 #include<wx/wxprec.h>
 #ifdef WX_PRECOMP
 #include <wx/wx.h>
-#include <wx/intl.h>
 #endif
 #include "../AccessControl/LoginFrame.h"
  
@@ -13,10 +12,6 @@ class MainApp : public wxApp {
     public:
         virtual bool OnInit();
         void RecreateGUI();
-        void SetLanguage(wxLanguage language);
-    private:
-        wxLocale* locale;
-        wxLanguage language;   
 };
 
 DECLARE_APP(MainApp)

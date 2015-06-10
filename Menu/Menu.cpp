@@ -55,13 +55,16 @@ void Menu::OnSave(wxCommandEvent& event){
             
 }
 void Menu::OnPortuguese(wxCommandEvent& event){
-        wxGetApp().SetLanguage(wxLANGUAGE_PORTUGUESE_BRAZILIAN);
+        wxGetApp().SetLanguage(wxLANGUAGE_PORTUGUESE_BRAZILIAN);   
+        wxGetApp().RecreateGUI();    
 }
 void Menu::OnEnglish(wxCommandEvent& event){  
-        wxGetApp().SetLanguage(wxLANGUAGE_ENGLISH);
+        wxGetApp().SetLanguage(wxLANGUAGE_ENGLISH);             
+        wxGetApp().RecreateGUI();
 }
 void Menu::OnSpanish(wxCommandEvent& event){  
         wxGetApp().SetLanguage(wxLANGUAGE_SPANISH);
+        wxGetApp().RecreateGUI();
 }
 
 void Menu::OnHelp(wxCommandEvent& event){

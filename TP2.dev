@@ -8,7 +8,7 @@ UnitCount=5
 UnitCount=7
 >>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 =======
-UnitCount=15
+UnitCount=17
 >>>>>>> menu
 PchHead=-1
 PchSource=-1
@@ -59,7 +59,7 @@ ProductName=
 ProductVersion=
 AutoIncBuildNrOnRebuild=0
 AutoIncBuildNrOnCompile=0
-UnitCount=13
+UnitCount=17
 
 [Profile1]
 ProfileName=MingW gcc
@@ -282,12 +282,15 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit14]
-FileName=Translation\Translation.cpp
+[Unit15]
+<<<<<<< HEAD
+FileName=Translation\Translation.h
 CompileCpp=1
 Folder=TP2/AccessControl.cpp
 =======
-Folder=TP2
+FileName=Translation\Translation.h
+CompileCpp=1
+Folder=TP2/MainFrame.cpp
 >>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
 Compile=1
 Link=1
@@ -295,16 +298,30 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit15]
-<<<<<<< HEAD
-FileName=Translation\Translation.h
+[Unit14]
+FileName=Translation\Translation.cpp
 CompileCpp=1
-Folder=TP2/AccessControl.cpp
-=======
-FileName=AccessControl\Sha1.h
+Folder=TP2/MainFrame.cpp
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit16]
+FileName=SplashScreen\SplashScreen.cpp
 CompileCpp=1
-Folder=TP2
->>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
+Folder=TP2/MainFrame.cpp
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit17]
+FileName=SplashScreen\SplashScreen.h
+CompileCpp=1
+Folder=TP2/MainFrame.cpp
 Compile=1
 Link=1
 Priority=1000

@@ -38,7 +38,7 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     CreateStatusBar(3);
     SetStatusText("TP2 PAC", 0);
     
-    Connect(ID_NEW, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnNew)); 
+    Connect(ID_NEW, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnNew));
     Connect(ID_OPEN, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnOpen));
     Connect(ID_SAVE, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnSave));   
     Connect(ID_HELP, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnHelp));
