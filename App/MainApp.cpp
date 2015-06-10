@@ -24,7 +24,7 @@ void MainApp::RecreateGUI(){
         SetTopWindow(NULL);
         topwindow->Destroy();
     }
-    MainFrame * frame = new MainFrame(_("tp2pac"), posMain, sizeMain);
+    MainFrame * frame = new MainFrame(_("TP2 - PAC"), posMain, sizeMain);
     SetTopWindow(frame);
     frame->Centre();
     frame->Show();

@@ -1,14 +1,14 @@
 # Project: TP2
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 10/06/15 13:48
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 10/06/15 13:28
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/MainApp.o Objects/MingW/Menu.o Objects/MingW/MainFrame.o Objects/MingW/About.o Objects/MingW/AccessControl.o Objects/MingW/LoginFrame.o Objects/MingW/Translation.o
-LINKOBJ   = "Objects/MingW/MainApp.o" "Objects/MingW/Menu.o" "Objects/MingW/MainFrame.o" "Objects/MingW/About.o" "Objects/MingW/AccessControl.o" "Objects/MingW/LoginFrame.o" "Objects/MingW/Translation.o"
+OBJ       = Objects/MingW/MainApp.o Objects/MingW/Menu.o Objects/MingW/MainFrame.o Objects/MingW/About.o Objects/MingW/AccessControl.o Objects/MingW/LoginFrame.o
+LINKOBJ   = "Objects/MingW/MainApp.o" "Objects/MingW/Menu.o" "Objects/MingW/MainFrame.o" "Objects/MingW/About.o" "Objects/MingW/AccessControl.o" "Objects/MingW/LoginFrame.o"
 LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  "../../../../../../Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib/sqlite3.a"  
 INCS      = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
@@ -36,10 +36,10 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/MainApp.o: $(GLOBALDEPS) App/MainApp.cpp App/MainApp.h AccessControl/LoginFrame.h AccessControl/AccessControl.h App/Constant.h Frame/MainFrame.h
+Objects/MingW/MainApp.o: $(GLOBALDEPS) App/MainApp.cpp App/MainApp.h AccessControl/LoginFrame.h AccessControl/AccessControl.h Frame/MainFrame.h App/Constant.h Frame/MainFrame.h
 	$(CPP) -c App/MainApp.cpp -o Objects/MingW/MainApp.o $(CXXFLAGS)
 
-Objects/MingW/Menu.o: $(GLOBALDEPS) Menu/Menu.cpp Menu/Menu.h App/MainApp.h AccessControl/LoginFrame.h AccessControl/AccessControl.h About/About.h
+Objects/MingW/Menu.o: $(GLOBALDEPS) Menu/Menu.cpp Menu/Menu.h App/MainApp.h AccessControl/LoginFrame.h AccessControl/AccessControl.h Frame/MainFrame.h About/About.h
 	$(CPP) -c Menu/Menu.cpp -o Objects/MingW/Menu.o $(CXXFLAGS)
 
 Objects/MingW/MainFrame.o: $(GLOBALDEPS) Frame/MainFrame.cpp Frame/MainFrame.h Menu/Menu.h
@@ -51,8 +51,5 @@ Objects/MingW/About.o: $(GLOBALDEPS) About/About.cpp About/About.h
 Objects/MingW/AccessControl.o: $(GLOBALDEPS) AccessControl/AccessControl.cpp AccessControl/AccessControl.h
 	$(CPP) -c AccessControl/AccessControl.cpp -o Objects/MingW/AccessControl.o $(CXXFLAGS)
 
-Objects/MingW/LoginFrame.o: $(GLOBALDEPS) AccessControl/LoginFrame.cpp AccessControl/LoginFrame.h AccessControl/AccessControl.h
+Objects/MingW/LoginFrame.o: $(GLOBALDEPS) AccessControl/LoginFrame.cpp AccessControl/LoginFrame.h AccessControl/AccessControl.h Frame/MainFrame.h
 	$(CPP) -c AccessControl/LoginFrame.cpp -o Objects/MingW/LoginFrame.o $(CXXFLAGS)
-
-Objects/MingW/Translation.o: $(GLOBALDEPS) Translation/Translation.cpp
-	$(CPP) -c Translation/Translation.cpp -o Objects/MingW/Translation.o $(CXXFLAGS)

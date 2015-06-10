@@ -27,3 +27,4 @@ idAcao INTEGER REFERENCES acao(idAcao) on delete cascade
 );
 
 
+"INSERT INTO user(idUser, login, senha) VALUES (NULL, 'hugo.mendes', '123');

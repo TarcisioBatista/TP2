@@ -260,7 +260,11 @@ BuildCmd=
 [Unit12]
 FileName=AccessControl\LoginFrame.cpp
 CompileCpp=1
+<<<<<<< HEAD
 Folder=TP2/AccessControl.h
+=======
+Folder=TP2
+>>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
 Compile=1
 Link=1
 Priority=1000
@@ -270,6 +274,7 @@ BuildCmd=
 [Unit13]
 FileName=AccessControl\LoginFrame.h
 CompileCpp=1
+<<<<<<< HEAD
 Folder=TP2/AccessControl.h
 Compile=1
 Link=1
@@ -281,6 +286,9 @@ BuildCmd=
 FileName=Translation\Translation.cpp
 CompileCpp=1
 Folder=TP2/AccessControl.cpp
+=======
+Folder=TP2
+>>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
 Compile=1
 Link=1
 Priority=1000
@@ -288,9 +296,15 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit15]
+<<<<<<< HEAD
 FileName=Translation\Translation.h
 CompileCpp=1
 Folder=TP2/AccessControl.cpp
+=======
+FileName=AccessControl\Sha1.h
+CompileCpp=1
+Folder=TP2
+>>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
 Compile=1
 Link=1
 Priority=1000
