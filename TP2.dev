@@ -8,7 +8,7 @@ UnitCount=5
 UnitCount=7
 >>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 =======
-UnitCount=17
+UnitCount=15
 >>>>>>> menu
 PchHead=-1
 PchSource=-1
@@ -282,32 +282,6 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit15]
-<<<<<<< HEAD
-FileName=Translation\Translation.h
-CompileCpp=1
-Folder=TP2/AccessControl.cpp
-=======
-FileName=Translation\Translation.h
-CompileCpp=1
-Folder=TP2/MainFrame.cpp
->>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit14]
-FileName=Translation\Translation.cpp
-CompileCpp=1
-Folder=TP2/MainFrame.cpp
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit16]
 FileName=SplashScreen\SplashScreen.cpp
 CompileCpp=1
@@ -319,6 +293,26 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit17]
+FileName=SplashScreen\SplashScreen.h
+CompileCpp=1
+Folder=TP2/MainFrame.cpp
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit14]
+FileName=SplashScreen\SplashScreen.cpp
+CompileCpp=1
+Folder=TP2/MainFrame.cpp
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit15]
 FileName=SplashScreen\SplashScreen.h
 CompileCpp=1
 Folder=TP2/MainFrame.cpp
