@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-06-10 13:08-0300\n"
+"PO-Revision-Date: 2015-06-10 13:06-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\\\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: AccessControl/AccessControl.cpp:17
+msgid "Erro ao abri banco de dados!"
+msgstr "Fail to open data base"
+
+#: AccessControl/AccessControl.cpp:17 AccessControl/AccessControl.cpp:29
+#: AccessControl/AccessControl.cpp:34
+msgid "Erro"
+msgstr "Error"
+
+#: AccessControl/AccessControl.cpp:29
+msgid "Falha ao buscar dados!"
+msgstr "fail to serach data!"
+
+#: AccessControl/LoginFrame.cpp:15
+msgid "Login:"
+msgstr "Login:"
+
+#: AccessControl/LoginFrame.cpp:16
+msgid "Senha:"
+msgstr "Password:"
+
+#: AccessControl/LoginFrame.cpp:19
+msgid "Entrar"
+msgstr "Login"
+
+#: AccessControl/LoginFrame.cpp:21
+msgid "Cancelar"
+msgstr "Cancel"
+
+#: AccessControl/LoginFrame.cpp:46
+msgid "Teste OK!"
+msgstr "Test"
+
+#: AccessControl/LoginFrame.cpp:46
+msgid "Teste"
+msgstr "test"
+
+#: App/MainApp.cpp:11
+msgid "Login"
+msgstr "Login"
+
+#: Frame/MainFrame.cpp:22 Menu/Menu.cpp:36
+msgid "Novo"
+msgstr "New"
+
+#: Frame/MainFrame.cpp:23 Menu/Menu.cpp:11 Menu/Menu.cpp:44 Menu/Menu.cpp:50
+msgid "Salvar"
+msgstr "Save"
+
+#: Frame/MainFrame.cpp:24 Menu/Menu.cpp:10
+msgid "Abrir"
+msgstr "Open"
+
+#: Frame/MainFrame.cpp:28 Menu/Menu.cpp:62
+msgid "Ajuda"
+msgstr "Help"
+
+#: Frame/MainFrame.cpp:29 Menu/Menu.cpp:13
+msgid "Sair"
+msgstr "Exit"
+
+#: Menu/Menu.cpp:9
+msgid "&Novo"
+msgstr "&New"
+
+#: Menu/Menu.cpp:9
+msgid "Novo Arquivo"
+msgstr "New File"
+
+#: Menu/Menu.cpp:10
+msgid "&Abrir"
+msgstr "&Open"
+
+#: Menu/Menu.cpp:11
+msgid "&Salvar"
+msgstr "&Save"
+
+#: Menu/Menu.cpp:13
+msgid "&Sair"
+msgstr "&Exit"
+
+#: Menu/Menu.cpp:14
+msgid "&Arquivo"
+msgstr "&File"
+
+#: Menu/Menu.cpp:19
+msgid "&Portuguese"
+msgstr "&Portuguese"
+
+#: Menu/Menu.cpp:19
+msgid "Traduzir para o Portuges"
+msgstr "Translate to Portuguese"
+
+#: Menu/Menu.cpp:20
+msgid "&English"
+msgstr "&English"
+
+#: Menu/Menu.cpp:20
+msgid "Translate to English"
+msgstr "Translate to English"
+
+#: Menu/Menu.cpp:21
+msgid "&Idiomas"
+msgstr "&Languages"
+
+#: Menu/Menu.cpp:21
+msgid "idiomas"
+msgstr "languages"
+
+#: Menu/Menu.cpp:22
+msgid "Ferramentas"
+msgstr "Tools"
+
+#: Menu/Menu.cpp:27 Menu/Menu.cpp:29
+msgid "&Sobre"
+msgstr "&About"
+
+#: Menu/Menu.cpp:27
+msgid "Exibe informações sobre o software"
+msgstr "Show information about the software"
+
+#: Menu/Menu.cpp:28
+msgid "&Ajuda"
+msgstr "&Help"
+
+#: Menu/Menu.cpp:28
+msgid "Abre a opção de ajuda."
+msgstr "Open the help option"
+
+#: Menu/Menu.cpp:35
+msgid "Um novo arquivo foi selecionado."
+msgstr "A new file has been selected"
+
+#: Menu/Menu.cpp:39
+msgid "Abrir um arquivo"
+msgstr "Open a File"
+
+#: Menu/Menu.cpp:49
+msgid "O Arquivo foi salvo."
+msgstr "The file has been save"
+
+#: Menu/Menu.cpp:53
+msgid "testando tratamento de eventos3"
+msgstr "Testing evente tretment"
+
+#: Menu/Menu.cpp:54
+msgid "portugues"
+msgstr "Portuguese"
+
+#: Menu/Menu.cpp:57
+msgid "testando tratamento de eventos4"
+msgstr "Trying event treatmeant"
+
+#: Menu/Menu.cpp:58
+msgid "ingles"
+msgstr "English"
+
+#: Menu/Menu.cpp:61
+msgid "Opção de ajuda."
+msgstr "Help option"
+
+#: Menu/Menu.cpp:71
+msgid ""
+"Este sotware foi desenvovido por\n"
+"Tarcisio Batista e Jéssica Ferreira\n"
+"como segundo trabalho prático\n"
+" da disciplina de Projeto Assistido \n"
+"por Computador - PAC,\n"
+"5º período de \n"
+"Engenharia de Sistemas.\n"
+"Unimontes - 2015"
+msgstr ""
+"This software was developed by\n"
+"Tarcisio Batista and Jessica Ferreira\n"
+"as second home work for the \n"
+"Computer assisted programming \n"
+"disciplin - PAC,\n"
+"5 period Systems Engeneering\n"
+"Unimontes - 2015."

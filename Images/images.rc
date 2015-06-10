@@ -1,0 +1,8 @@
+#include "wx/msw/wx.rc"
+
+splash BITMAP "/splash.bmp"
+file BITMAP "/Icones/newfile.bmp"
+save BITMAP "/Icones/save.bmp" 
+open BITMAP "/Icones/open.bmp" 
+help BITMAP "/Icones/help.bmp" 
+close BITMAP "/Icones/close.bmp"
