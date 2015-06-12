@@ -6,8 +6,6 @@
 #include <wx/wx.h>
 #endif
 
-#include "Constant.h"
-#include "../Frame/MainFrame.h"
 #include "../AccessControl/LoginFrame.h"
  
 
