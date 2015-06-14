@@ -1,18 +1,12 @@
 #include "MainApp.h"
 #include "Constant.h"
-#include "../Frame/MainFrame.h"
+
 
 IMPLEMENT_APP(MainApp)
   
 //O método OnInit cria uma frame na tela com os dados dos menus e barras de ferramentas.
 //Também cria a frame inicial de login no sistema
-bool MainApp::OnInit(){    
- 
-    
-    //Frame de login 
-//    LoginFrame *lframe = new LoginFrame(_("Login"));
-//    lframe->Show(true);
-//    SetTopWindow(lframe);                                
+bool MainApp::OnInit(){                                   
     RecreateGUI();         
     return true;                                  
 };
@@ -24,10 +18,11 @@ void MainApp::RecreateGUI(){
         SetTopWindow(NULL);
         topwindow->Destroy();
     }
-    MainFrame * frame = new MainFrame(_("TP2 - PAC"), posMain, sizeMain);
-    SetTopWindow(frame);
-    frame->Centre();
-    frame->Show();
+    //Frame de login 
+    LoginFrame *lframe = new LoginFrame(_("Login"));
+    SetTopWindow(lframe);
+    lframe->Centre();
+    lframe->Show(true);
 }
 void MainApp::SetLanguage(wxLanguage language){
     // carrega outra lingua se possivel, se não volta para a lingua padrão

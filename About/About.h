@@ -8,6 +8,7 @@ class About: public wxDialog{
     public:
         //Construtur
         About(wxWindow *parent);
+        //Setar texto about
         void SetText(const wxString& text);
         
     private:

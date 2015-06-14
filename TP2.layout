@@ -31,20 +31,20 @@ LeftChar=1
 Open=0
 Top=0
 <<<<<<< HEAD
-CursorCol=59
-CursorRow=15
+CursorCol=18
+CursorRow=36
 =======
 CursorCol=1
 CursorRow=8
 >>>>>>> a6d23c23c3f12c913c9c9d5b40545a7acd1e434e
-TopLine=1
+TopLine=17
 LeftChar=1
 [Editor_2]
 Open=0
 Top=0
-CursorCol=28
-CursorRow=91
-TopLine=1
+CursorCol=61
+CursorRow=39
+TopLine=23
 LeftChar=1
 [Editor_3]
 Open=0
@@ -57,8 +57,8 @@ LeftChar=1
 Open=0
 Top=0
 <<<<<<< HEAD
-CursorCol=21
-CursorRow=16
+CursorCol=41
+CursorRow=9
 =======
 CursorCol=1
 CursorRow=8
@@ -117,20 +117,20 @@ CursorRow=1
 TopLine=1
 LeftChar=1
 [Editor_7]
-CursorCol=44
+CursorCol=28
 CursorRow=11
 TopLine=1
 LeftChar=1
 [Editor_8]
-CursorCol=5
-CursorRow=6
+CursorCol=19
+CursorRow=1
 TopLine=1
 LeftChar=1
 [Editor_9]
 <<<<<<< HEAD
-CursorCol=34
-CursorRow=9
-TopLine=1
+CursorCol=1
+CursorRow=40
+TopLine=21
 LeftChar=1
 [Editor_10]
 CursorCol=5
@@ -138,8 +138,8 @@ CursorRow=6
 TopLine=1
 LeftChar=1
 [Editor_12]
-CursorCol=46
-CursorRow=27
+CursorCol=38
+CursorRow=5
 TopLine=1
 LeftChar=1
 [Editor_11]
