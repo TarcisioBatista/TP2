@@ -258,9 +258,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=AccessControl\LoginFrame.h
+FileName=AccessControl\LoginFrame.cpp
 CompileCpp=1
-Folder=
+Folder=TP2
 Compile=1
 Link=1
 Priority=1000
@@ -268,9 +268,19 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit13]
-FileName=AccessControl\LoginFrame.cpp
+FileName=AccessControl\LoginFrame.h
 CompileCpp=1
-Folder=
+Folder=TP2
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit15]
+FileName=AccessControl\Sha1.h
+CompileCpp=1
+Folder=TP2
 Compile=1
 Link=1
 Priority=1000

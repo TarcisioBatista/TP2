@@ -5,10 +5,10 @@ AccessControl::AccessControl(){
     open_bd();
     
     
-   // executa();    
+   //executa("INSERT INTO user(idUser, login, senha) VALUES (NULL, 'hugo.mendes', '123');");    
     
     
-    
+    createHash();
     
     //fecha bd
     close_bd();
@@ -40,5 +40,9 @@ void AccessControl::executa(char *sql){
 }
 
 void AccessControl::insere(){
-    
+        
 }
+
+void AccessControl::createHash(){
+}
+

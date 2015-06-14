@@ -2,7 +2,7 @@
 
 LoginFrame::LoginFrame(const wxString &name) 
             : wxFrame(NULL, -1, name, wxDefaultPosition, wxSize(290, 180)){
-                
+    
     //Criar painel e Boxsizers            
     wxPanel *painel = new wxPanel(this, -1);
     wxBoxSizer *boxprincipal = new wxBoxSizer(wxVERTICAL);
@@ -19,7 +19,7 @@ LoginFrame::LoginFrame(const wxString &name)
     btLogin = new wxButton(painel, 1000, wxT("Entrar"));
     Connect(1000, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::entrar));
     btCancel = new wxButton(painel, 1001, wxT("Cancelar"));
-    Connect(1001, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::cancelar));
+    Connect(1001, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(LoginFrame::cancel));
     
     //Colocando caixas de texto e botões no boxsizer
     boxtexto->Add(txlogin, 1, wxALL, 10);
@@ -39,13 +39,42 @@ LoginFrame::LoginFrame(const wxString &name)
     Centre();
     
     //Objeto de controle de acesso
-    AccessControl acc;                
+    AccessControl acc;
+
+                    
 }
 
 void LoginFrame::entrar(wxCommandEvent &event){
-    wxMessageBox( "Teste OK! ","Teste", wxOK | wxICON_INFORMATION );
+    //Verificar se o usuário digigou valores nas caixas de texto.
+    //Se não tiver digitado, aviso. Se tiver digitado, continua execução
+    if(login->IsEmpty() || password->IsEmpty())
+        wxMessageBox( "Por favor, preencha todos os campos!","Aviso", wxOK | wxICON_INFORMATION );
+    else{   
+        //receber valores das caixas de texto
+        loginCurrent = login->GetValue();
+        passwordCurrent = password->GetValue();
+        //verificar login
+        if(checkLogin(loginCurrent, passwordCurrent)){
+            Close(true);
+            //Frame principal
+            MainFrame *frame = new MainFrame("TP2", wxPoint(-1,-1), wxSize(900,700));
+            frame->Show(true);   
+        }
+        else {
+            wxMessageBox( "Login ou senha incorretos!","Aviso", wxOK | wxICON_INFORMATION );
+            login->Clear();
+            password->Clear();
+        }
+    }
 }
-
-void LoginFrame::cancelar(wxCommandEvent &event){
+//Esse método fecha a frame de login
+void LoginFrame::cancel(wxCommandEvent &event){
     Close( true );   
+}
+//Esse método verifica se o login digitadp está correto e armazenado no bd.
+//Se estiver retorna true, se não estiver retorna false.
+bool LoginFrame::checkLogin(wxString user, wxString pass){
+    
+    //return false;
+    return true;   
 }

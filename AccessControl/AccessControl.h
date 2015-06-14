@@ -4,6 +4,7 @@
 #include <wx/wx.h>
 #include <wx/sqlite3.h>
 #include <stdio.h>
+#include  <string.h>
 
 //Essa classe faz o controle de acesso ao programa por meio de logins e senhas
 //Por enquanto apenas armazena logins e senhas no bd, nada mais.
@@ -20,8 +21,9 @@ class AccessControl{
         void executa(char *sql); 
         
         void insere();
+        void createHash();
           
-        
+
     private:
         //bd
         sqlite3 *db;
