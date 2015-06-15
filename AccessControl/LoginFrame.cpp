@@ -1,4 +1,6 @@
-#include "LoginFrame.h"
+//ja existe esse loginframe na mainapp.h, inclusive ele nao sai de lá, se tirar da pau kkk
+//#include "LoginFrame.h"
+#include "../App/MainApp.h"
 
 LoginFrame::LoginFrame(const wxString &name) 
             : wxFrame(NULL, -1, name, wxDefaultPosition, wxSize(290, 180)){
@@ -53,10 +55,9 @@ void LoginFrame::entrar(wxCommandEvent &event){
         //verificar login
         if(confirmLogin(loginCurrent, passwordCurrent)){
             //Se o login estiver correto, fecha frame de login e abre frame principal
-            Close(true);
-            //Frame principal
-            MainFrame *frame = new MainFrame(_("TP2 - PAC"), wxPoint(-1,-1), wxSize(900,700));
-            frame->Show(true);   
+             Close(true);
+            //Frame principal 
+            wxGetApp().RecreateGUI();  
         }
         else {
             //se o login não estiver correto, mostra mensagem de erro e limpa os campos de digitação
