@@ -5,10 +5,11 @@
 #include <wx/wx.h>
 #include <wx/sqlite3.h>
 #include <stdio.h>
-#include  <string.h>
+#include <string.h>
+#include <time.h>
 
-//Essa classe faz o controle de acesso ao programa por meio de logins e senhas
-//Por enquanto apenas armazena logins e senhas no bd, nada mais.
+//Essa classe faz o controle de acesso ao programa por meio de logins e senhas e
+//armazena o log das ações login e logout
 class AccessControl{
     public:
         //Construtor
@@ -23,9 +24,6 @@ class AccessControl{
         //Método para executar instruções sql
         std::string executa(const char *sql);
 
-        //Método para fazer hash nas senhas de usuário
-        void createHash();
-
         //Métodos para conversão entre tipos
         std::string convertToString(wxString text);
         std::string convertToString1(const char* text);
@@ -34,6 +32,16 @@ class AccessControl{
 
         //Método para criar consulta sql
         std::string createQuery(std::string field, int option);
+        
+        //Método para criar a sql de inserir o log das ações no bd
+        std::string sqlLog(std::string text, int option);
+        std::string logString;
+        
+        //Método para criar log
+        void log(int option);
+        
+        //armazenar id do usuário que está logado
+        std::string idUser; 
         
         //Método que verifica se o login digitado confere com o armazenado no bd
         std::string checkLogin(wxString text, int option);

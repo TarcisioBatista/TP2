@@ -28,6 +28,8 @@ class Menu: public wxMenuBar{
         
         wxTextCtrl *m_pTextCtrl;
         
+
+        
 };
 
 //Constantes que identificam os eventos de cliques nas respectivas opções do menu

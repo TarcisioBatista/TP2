@@ -77,6 +77,9 @@ void Menu::OnHelp(wxCommandEvent& event){
 }
 void Menu::OnExit(wxCommandEvent& event)
 {
+    //wxLogMessage("Aqui!", _("Erro"), wxOK | wxICON_INFORMATION);
+    AccessControl acc;
+    acc.log(2);
     Close( true );
 }
 void Menu::OnAbout(wxCommandEvent& event)

@@ -13,7 +13,6 @@ class LoginFrame: public wxFrame{
         //Construtor
         LoginFrame(const wxString &name); 
         
-        
     private:
         //Caixas de texto para login e senha
         wxTextCtrl *login;
@@ -31,12 +30,15 @@ class LoginFrame: public wxFrame{
         wxString loginCurrent;
         wxString passwordCurrent;
         
+        //Métodos de tratamento dos eventos de clique nos botões entrar e cancelar
         void entrar(wxCommandEvent &event);
         void cancel(wxCommandEvent &event);
-        bool confirmLogin(wxString user, wxString pass);
+        
+        //Método para confirmar se o login e senha digitados estão corretos
+        bool confirmLogin(wxString user, wxString pass);       
         
         //Objeto de controle de acesso
-        AccessControl acc;
+        AccessControl acc;        
     
 };
 
