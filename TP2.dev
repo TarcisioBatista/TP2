@@ -8,7 +8,7 @@ UnitCount=5
 UnitCount=7
 >>>>>>> e647a5908d5e5027253f5312c17a7dc444f971ac
 =======
-UnitCount=15
+UnitCount=17
 >>>>>>> menu
 PchHead=-1
 PchSource=-1
@@ -283,9 +283,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit16]
-FileName=SplashScreen\SplashScreen.cpp
+FileName=Help\Help.cpp
 CompileCpp=1
-Folder=TP2/MainFrame.cpp
+Folder=TP2/Constant.h
 Compile=1
 Link=1
 Priority=1000
@@ -293,9 +293,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit17]
-FileName=SplashScreen\SplashScreen.h
+FileName=Help\Help.h
 CompileCpp=1
-Folder=TP2/MainFrame.cpp
+Folder=TP2/Constant.h
 Compile=1
 Link=1
 Priority=1000

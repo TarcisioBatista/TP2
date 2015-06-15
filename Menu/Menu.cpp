@@ -2,6 +2,7 @@
 #include "Menu.h"
 #include "../App/MainApp.h"
 #include "../About/About.h"
+#include "../Help/Help.h"
    
 Menu::Menu()
         :wxMenuBar(){
@@ -75,9 +76,9 @@ void Menu::OnSpanish(wxCommandEvent& event){
         wxGetApp().RecreateGUI();        
 }
 
+//chama a classe help que mapeia o as opções de help e mostra
 void Menu::OnHelp(wxCommandEvent& event){
-        wxMessageBox( _("Opção de ajuda."),
-            _("Ajuda"), wxOK | wxICON_INFORMATION );
+    Help *helpController = new Help(this->GetParent());
 }
 // ao selecionado o menu sair a aplicação é encerrada.
 void Menu::OnExit(wxCommandEvent& event)
