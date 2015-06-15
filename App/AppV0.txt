@@ -1,0 +1,23 @@
+A classe MainApp é a responsavel por todas as coisas que acontecem no
+programa, ela é analoga a main() em outros linguagens. Na MainApp
+foram criados 3 métodos OnInit(), RecreateGUI(), SetLanguage(). 
+
+O método OnInit é responsavel pela criação das telas e splash screen e
+da tela de login. 
+
+O método RecreateGUI é responsável pela destruição erecriação da
+frame se faz necessário por causa de como funciona ometodo de 
+tradução. 
+
+O método SetLanguage recebe como parametro uma wxLanguage, 
+e busca  essa linguagem dentro de seu catalogo se a linguagem
+existrir ele cria um locale que muda toda a linguagem do
+programa para elementos escritos a partir dali por isso se faz
+necessário a recriação da frame pois os elementos tem que ser
+reescritos na nova lingua.
+
+o metodo set language precisa de alguns requisitos para funcionar
+como gettext instalado e marcar todas a possiveis mensagens
+que serão mostradas na tela com _() que significa que essa 
+string deve ser traduzida. Para maiores informações consulte
+http://wxwidgets.info/wxtranslation/
