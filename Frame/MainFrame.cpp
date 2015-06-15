@@ -9,9 +9,6 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     Menu *MenuBar = new Menu();
     SetMenuBar(MenuBar);
     Centre();
-    
-    // connectando eventos de menu da frame aos "handlers" da classe menu
-
       
     //Setando o ícone
     SetIcon(wxIcon(wxString(_T("/../Images/Icones/icone"), wxBITMAP_TYPE_BMP)));
@@ -38,6 +35,7 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     CreateStatusBar(3);
     SetStatusText("TP2 PAC", 0);
     
+    // connectando eventos de menu da frame aos "handlers" da classe menu
     Connect(ID_NEW, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnNew));
     Connect(ID_OPEN, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnOpen));
     Connect(ID_SAVE, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(Menu::OnSave));   

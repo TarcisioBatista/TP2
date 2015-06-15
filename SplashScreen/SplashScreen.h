@@ -2,5 +2,5 @@
 
 class SplashScreen : public wxSplashScreen{   
     public:
-        void SetSS();
+        void SetSS(wxString img);
 };

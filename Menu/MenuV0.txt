@@ -1,1 +1,24 @@
-criando varios menus e fazendo tratamentos de eventos de menu
+A classe Menu cria um menu com os seguintes itens
+
+Arquivo  Ferramentas			Sobre
+	Novo	idiomas-> Portugues		Sobre			
+	Abrir			  English		Ajuda
+	Salvar			  Espanõl
+	------
+	Sair
+
+cada opção de menu tem um tratamento de evento especifico o menu é
+conectado na frame e os tratamentos de eventos de de menu tem que ser
+ligados atraves do comando "connect" aos seus tratadores dentro do
+menu.cpp, eventos de tradução poderiam ser tratados dentro da classe
+menu, mas apenas  traduzem o que ainda não foi escrito logo criou-se a
+necessidade de refazer o programa após a ter a tradução selecionada
+portanto  o tratamento desse tipo de eventos é feito dentro da classe
+app e é acessado atraves do comando wxGetApp().
+---------------------------------------------------------------------
+A opção de Barra de Ferramentas foi criada juntamente a frame mas seus
+eventos são mt parecidos com os de menu, portanto os  tratamentos de
+eventos da barra de ferramentas tbm são ligados aos mesmos tratadores
+dentro do menu.cpp como os dois estão na  frame é utilizado apenas um
+connect para ligar eventos de menu e eventos de barra de ferramentas
+em comun.

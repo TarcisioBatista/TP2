@@ -1,0 +1,8 @@
+A classe SplashScreen contem apenas um metodo o SetSS, que significa,
+Set Splash Screen, o  método recebe como paramaetro uma wxString  com
+o caminho da imagem em relação a onde está o executavel do programa, a
+imagem tem que ser do tipo bitmap ".btm" pois foi o tipo melhor aceito
+pela classe wxSplashScreen. A splash screen  ficará na tela por 3500ms
+segundos ou seja 3,5 seg para alteração desse e outro parametros ler
+documentação wxSplashScreen no link
+docs.wxwidgets.org/trunk/classwx_splash_screen.html
