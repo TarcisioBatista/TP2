@@ -1,0 +1,108 @@
+Access Control V0
+
+---------------------------------------
+Como utilizar
+
+
+1- Criar um arquivo de banco de dados (.db / .db3) e colocá-lo junto ao arquivo executável
+do programa.
+
+2- Inserir o nome do banco de dados no método open_bd() que se encontra no arquivo 
+AccessControl.cpp. 
+
+3- Criar as tabelas do banco de dados utilizando a sql do arquivo "sql banco de dados.txt"
+
+4- Colocar a frame de login para ser executada como aplicação inicial, na MainApp por exemplo.
+
+5- No método entrar, na LoginFrame.cpp, substituir "wxGetApp().RecreateGUI();" pelas instruções de
+criação da frame que executará as funções do software.
+
+-----------------------------------------
+
+Funções básicas:
+
+
+Classe LoginFrame
+
+--------
+void entrar(wxCommandEvent &event);
+
+Trata o evento de clique no botão entrar. Ao clicar no botão é verificado se todos os campos foram 
+preenchidos. Caso não forem exibe um aviso. Caso forem prossegue para verificação de login.
+Na verificação de login, é chamado o método confirmLogin. Caso ele retorne verdadeiro, a frame de 
+login é fechada e é aberta a frame que executará as funções so software. Caso ele retorne falso
+é exibido um avido de login incorreto e os campos de digitação são limpos.
+
+--------
+void cancel(wxCommandEvent &event);
+
+Fecha a aplicação antes mesmo que o login seja efetuado.
+
+--------
+bool confirmLogin(wxString user, wxString pass);
+
+Retorna true (para login confirmado) ou false (para login não confirmado).
+A verificação é feita da seguinte maneira: é chamado o método "checkLogin" do objeto de controle de 
+acesso "acc'". "checkLogin" retorna o id de usuário que corresponde ao login (para o parâmetro 1)
+e o id de usuário que corresponde à senha (para o parâmetro 2), que estão armazenados no bando de dados.
+Se o retorno for "0" para qualquer um dos id's, quer dizer que esse login ou senha não foi encontrado
+no banco de dados. Se o retorno for algum outro valor, é verificado se os dois valores são iguais.
+Se forem iguais quer dizer que o login digitado corresponde à senha digitada e é retornado "true". 
+Caso contrário é retornado "false".
+
+
+
+Classe AccessControl
+
+--------
+AccessControl();
+
+Construtor, abre conexão com o banco de dados.
+
+--------
+~AccessControl();
+
+Destrutor, fecha conexão com o banco de dados.
+
+--------
+std::string executa(const char *sql);
+
+Esse método executa uma instrução sql qualquer, desde inserir até consultas e retorna o resultado 
+como uma std::string.
+Caso retorne "0" ou a instrução não foi executada ou não foi encontrado o registro procurado em uma
+consulta.
+
+--------
+std::string convertToString(wxString text);
+std::string convertToString1(const char* text);
+wxString convertTowxString(std::string text);
+const char *convertToChar(std::string text);
+
+Métodos de conversão entre tipos. Os métodos que convertem para wxString podem ser utilizados para
+visualizar alguma string ou char numa wxMessageBox, por exemplo.
+
+-------
+std::string createQuery(std::string field, int option);
+
+Método que cria uma consulta sql que é utilizada na verificação de login.
+
+
+--------
+std::string sqlLog(std::string text, int option);
+std::string logString;
+
+Método e variável utilizados para criar as consultas e inserções necessárias para armazenar o log 
+das ações. Na versão atual são armazenadas apenas as ações de login e logout no log.
+
+--------
+void log(int option);
+
+Método que insere a ação executada pelo usuário que está logado no software na tabela de log.
+A ação é identificada em option.
+
+-------
+std::string checkLogin(wxString text, int option);
+
+Esse método retorna como std::string o id de usuário que corresponde ao login ou senha passada como
+parâmetro na variável text. O parâmetro option indica se é login (1) ou senha (2).
+

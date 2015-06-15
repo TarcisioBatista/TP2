@@ -1,5 +1,3 @@
-//ja existe esse loginframe na mainapp.h, inclusive ele nao sai de lá, se tirar da pau kkk
-//#include "LoginFrame.h"
 #include "../App/MainApp.h"
 
 LoginFrame::LoginFrame(const wxString &name) 
@@ -53,7 +51,7 @@ void LoginFrame::entrar(wxCommandEvent &event){
         loginCurrent = login->GetValue();
         passwordCurrent = password->GetValue();
         //verificar login
-        if(confirmLogin(loginCurrent, passwordCurrent)){
+        if(confirmLogin(loginCurrent, passwordCurrent)==true){
             //Se o login estiver correto, fecha frame de login e abre frame principal
              Close(true);
             //Frame principal 
@@ -71,18 +69,26 @@ void LoginFrame::entrar(wxCommandEvent &event){
 void LoginFrame::cancel(wxCommandEvent &event){
     Close( true );   
 }
-//Esse método verifica se o login digitado está correto e armazenado no bd.
+//Esse método verifica se o login e a senha digitados estão corretos
 //Se estiver retorna true, se não estiver retorna false.
 bool LoginFrame::confirmLogin(wxString user, wxString pass){
     std::string userString = acc.convertToString(user);
+    std::string passString = acc.convertToString(pass);
     
-    //Verifica o login correpondente a senha digitada no banco de dados
-    std::string loginbd = acc.checkLogin(pass);
+    //Verifica o id do login e o id da senha
+    std::string idpassword = acc.checkLogin(passString,1);
+    std::string  idlogin = acc.checkLogin(userString,2);
     
-    //Se o login for igual ao digitado, login correto e retorna true
-    if(userString == loginbd)    
+    //Se algum dos dois id's for igual a zero quer dizer que não foi encontrado no bd
+    if(idpassword == "0" || idlogin == "0")
+        return false;
+    //Se o id do login for igual ao id da senha, login correto e retorna true     
+    if(idpassword == idlogin){ 
+        acc.idUser = idpassword;
+        acc.log(1);   
         return true;
-    //se não for igual, login ou senha incorretos e retorna false    
+    }
+    //se não for igual, login ou senha não correspondem no bd e retorna false    
     else return false;   
 }
 

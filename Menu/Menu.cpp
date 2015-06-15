@@ -82,6 +82,9 @@ void Menu::OnHelp(wxCommandEvent& event){
 // ao selecionado o menu sair a aplicação é encerrada.
 void Menu::OnExit(wxCommandEvent& event)
 {
+    //wxLogMessage("Aqui!", _("Erro"), wxOK | wxICON_INFORMATION);
+    AccessControl acc;
+    acc.log(2);
     Close( true );
 }
 // ao selecionado o menu sobre é mostrado informações dos desenvolvedores
