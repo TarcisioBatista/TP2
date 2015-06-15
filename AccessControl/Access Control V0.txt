@@ -73,7 +73,6 @@ Caso retorne "0" ou a instrução não foi executada ou não foi encontrado o regist
 consulta.
 
 --------
-
 std::string convertToString(wxString text);
 std::string convertToString1(const char* text);
 wxString convertTowxString(std::string text);
@@ -81,4 +80,29 @@ const char *convertToChar(std::string text);
 
 Métodos de conversão entre tipos. Os métodos que convertem para wxString podem ser utilizados para
 visualizar alguma string ou char numa wxMessageBox, por exemplo.
+
+-------
+std::string createQuery(std::string field, int option);
+
+Método que cria uma consulta sql que é utilizada na verificação de login.
+
+
+--------
+std::string sqlLog(std::string text, int option);
+std::string logString;
+
+Método e variável utilizados para criar as consultas e inserções necessárias para armazenar o log 
+das ações. Na versão atual são armazenadas apenas as ações de login e logout no log.
+
+--------
+void log(int option);
+
+Método que insere a ação executada pelo usuário que está logado no software na tabela de log.
+A ação é identificada em option.
+
+-------
+std::string checkLogin(wxString text, int option);
+
+Esse método retorna como std::string o id de usuário que corresponde ao login ou senha passada como
+parâmetro na variável text. O parâmetro option indica se é login (1) ou senha (2).
 
