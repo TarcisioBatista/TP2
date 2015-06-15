@@ -64,9 +64,15 @@ wxString AccessControl::convertTowxString(std::string text){
 }
 
 //Esse método monta uma consulta sql com a variável passada como parâmetro
-std::string AccessControl::createQuery(std::string field){
+//a opção indica qual consulta será feita.
+std::string AccessControl::createQuery(std::string field, int option){
     std::string query;
-    query = "SELECT login from user WHERE senha = '" + field + "';";
+    //opção == 1 verifica a senha
+    if(option==1)
+        query = "SELECT idUser from user WHERE senha = '" + field + "';";
+    //opção == 2 verifica login
+    else if (option == 2)
+        query = "SELECT idUser from user WHERE login = '" + field + "';";
     return query;   
 }
 
@@ -75,11 +81,11 @@ const char *AccessControl::convertToChar(std::string text){
     const char *result = text.c_str();
     return result;
 }
-//Esse método checa o login correspondente à senha digitada armazenado no bd e o retorna como string
-std::string AccessControl::checkLogin(wxString pass){
+//Esse método checa o id correspondente à senha ou login digitado armazenado no bd e o retorna como string
+std::string AccessControl::checkLogin(wxString text, int option){
     //Criar query
-    std::string passString = convertToString(pass);
-    std::string query = createQuery(passString);
+    std::string textString = convertToString(text);
+    std::string query = createQuery(textString,option);
     
     //Executar query
     const char *queryChar = convertToChar(query);  

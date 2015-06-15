@@ -33,10 +33,10 @@ class AccessControl{
         const char *convertToChar(std::string text);
 
         //Método para criar consulta sql
-        std::string createQuery(std::string field);
+        std::string createQuery(std::string field, int option);
         
         //Método que verifica se o login digitado confere com o armazenado no bd
-        std::string checkLogin(wxString pass);
+        std::string checkLogin(wxString text, int option);
 
     private:
         //bd

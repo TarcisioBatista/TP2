@@ -70,16 +70,18 @@ void LoginFrame::entrar(wxCommandEvent &event){
 void LoginFrame::cancel(wxCommandEvent &event){
     Close( true );   
 }
-//Esse método verifica se o login digitado está correto e armazenado no bd.
+//Esse método verifica se o login e a senha digitados estão corretos
 //Se estiver retorna true, se não estiver retorna false.
 bool LoginFrame::confirmLogin(wxString user, wxString pass){
     std::string userString = acc.convertToString(user);
+    std::string passString = acc.convertToString(pass);
     
-    //Verifica o login correpondente a senha digitada no banco de dados
-    std::string loginbd = acc.checkLogin(pass);
+    //Verifica o id do login e da senha
+    std::string idpassword = acc.checkLogin(passString,1);
+    std::string  idlogin = acc.checkLogin(userString,2);
     
-    //Se o login for igual ao digitado, login correto e retorna true
-    if(userString == loginbd)    
+    //Se o id do login for igual ao id da senha, login correto e retorna true
+    if(idpassword == idlogin)    
         return true;
     //se não for igual, login ou senha incorretos e retorna false    
     else return false;   
